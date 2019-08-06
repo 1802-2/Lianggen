@@ -1,0 +1,22 @@
+
+.t-list li:nth-child(1) a{
+	color: red;
+}
+.t-list a:hover{
+	color: red;
+}
+.t-body{
+	width: 100%;
+	text-align: center;
+	padding: 100px 0px;
+	font-size: 14px;
+	color: rgb(34,34,34);
+}
+.t-body p{
+	height: 30px;
+	line-height: 30px;
+}
+.t-body strong{
+	font-size: 18px;
+	color: black;
+}
