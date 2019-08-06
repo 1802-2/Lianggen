@@ -1,0 +1,53 @@
+body{
+	background: #f2f5f8;
+}
+#row-list{
+	margin-top: 30px;
+}
+.row-list{
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+	background: white;
+	border-bottom: 1px solid #ccc;
+}
+.row-list img{
+	width: 160px;
+	height: 90px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+.t-right{
+	background: white;
+	padding: 20px;
+	margin-top: 30px;
+}
+.t-right input{
+	border: none;
+	height: 30px;
+	outline: none;
+}
+.t-ipt{
+	border: 1px solid #ccc;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	border-radius: 30px;
+}
+.t-ipt i{
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.t-right ul li{
+	padding: 10px 0px;
+}
+@media all and (max-width:768px){
+	.row-list img{
+		width: 120px;
+		height: 67px;
+		padding-right: 20px;
+	}
+}
