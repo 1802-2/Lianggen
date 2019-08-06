@@ -1,0 +1,11 @@
+.met-editor {
+    background: #ffffff;
+    padding: 30px 0;
+    line-height: 2;
+    font-size: 14px;
+    font-weight: 300;
+    color: #222;
+}
+.met-editor p {
+    margin-bottom: 16px;
+}
