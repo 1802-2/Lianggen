@@ -6,18 +6,23 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title></title>
 	<link rel="stylesheet" href="./css/reset.css">
-	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./pages/base/base.css">
 	<link rel="stylesheet" href="./bootstarp插件/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./bootstarp插件/Font-Awesome-3.2.1/css/font-awesome.min.css">
-	<link rel="stylesheet" href="./css/base.css">
+	
 	<link rel="stylesheet" href="./css/gen/index.css">
+	
 	<script src="js/jquery-3.3.1.js"></script>
 	<script src="bootstarp插件/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	
+	<script type="text/javascript" src="./pages/base/base.js"></script>
 	<script type="text/javascript" src="./js/index-1.js"></script>
 </head>
 <body>
 	<!-- 按钮 -->
+	
+<div class="g-goTop">
+	<span class=" icon-angle-up"></span>
+</div>
 	<!-- 顶部吸顶 -->
 	<nav class="g-nav" id="g-nav">
 		<div class="container-fluid">
@@ -25,22 +30,84 @@
 				<div class="g-logo g-navbar-brand">
 					<img src="images/gen/logo.png" alt="">
 				</div>
-				<div class="g-navbar-toggle visible-xs" >
+				<div class="g-navbar-toggle" >
 					 <span class="icon-align-justify"></span>
 				</div>
 			</div>
 			<ul class="g-nav-list  hidden-xs">
 				<li><a href="javascript:;">首页</a> </li>
-				<li><a href="javascript:;">壹生科技<span class="caret"></span></a></li>
-				<li><a href="javascript:;">商务合作<span class="caret"></span></a></li>
-				<li><a href="javascript:;">壹生招聘<span class="crate"></span></a></li>
+				<li>
+					<a href="javascript:;">壹生科技<span class="caret"></span></a>
+					<ul class="g-show-coll" id="g-keji2">
+						<li><a href="">公司简介</a></li>
+						<li><a href="">创始人介绍</a></li>
+						<li><a href="">壹生大事记</a></li>
+						<li><a href="">新闻报道</a></li>
+						<li><a href="">荣誉奖项</a></li>
+					</ul>
+				</li>
+				<li >
+					<a href="javascript:;">商务合作<span class="caret"></span></a>
+					<ul class=" g-show-coll" id="g-shangwu2">
+						<li><a href="">联系方式</a></li>
+						<li><a href="">合作伙伴</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;" >辣妈计划<span class="caret"></span></a>
+					<ul class=" g-show-coll" id="g-lama2">
+						<li><a href="">项目介绍</a></li>
+						<li><a href="">明星辣妈</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;" >壹生招聘<span class="caret"></span></a>
+					<ul class="  g-show-coll" id="g-zhaopin2">
+						<li><a href="">加入我们</a></li>
+						<li><a href="">壹生福利</a></li>
+						<li><a href="">工作环境</a></li>
+						<li><a href="">团队介绍</a></li>
+					</ul>
+				</li>
 			</ul>
-			<div class="visible-xs" id="g-nav-list">
+			
+			<!-- 移动端 -->
+			<div  id="g-nav-list">
 				<ul class="">
 					<li><a href="javascript:;">首页</a> </li>
-					<li><a href="javascript:;">壹生科技<span class="caret"></span></a></li>
-					<li><a href="javascript:;">商务合作<span class="caret"></span></a></li>
-					<li><a href="javascript:;">壹生招聘<span class="crate"></span></a></li>
+					<li  data-toggle="collapse" data-target="#g-keji">
+						<a href="javascript:;" >壹生科技<span class="caret"></span></a>
+						<ul class="collapse  g-coll" id="g-keji">
+							<li><a href="">公司简介</a></li>
+							<li><a href="">创始人介绍</a></li>
+							<li><a href="">壹生大事记</a></li>
+							<li><a href="">新闻报道</a></li>
+							<li><a href="">荣誉奖项</a></li>
+						</ul>
+					</li>
+					<li data-toggle="collapse" data-target="#g-shangwu">
+						<a href="javascript:;">商务合作<span class="caret"></span></a>
+						<ul class="collapse g-coll" id="g-shangwu">
+							<li><a href="">联系方式</a></li>
+							<li><a href="">合作伙伴</a></li>
+						</ul>
+					</li>
+					<li data-toggle="collapse" data-target="#g-lama">
+						<a href="javascript:;">辣妈计划<span class="caret"></span></a>
+						<ul class="collapse g-coll" id="g-lama">
+							<li><a href="">项目介绍</a></li>
+							<li><a href="">明星辣妈</a></li>
+						</ul>
+					</li>
+					<li data-toggle="collapse" data-target="#g-zhaopin">
+						<a href="javascript:;">壹生招聘<span class="caret"></span></a>
+						<ul class="collapse g-coll" id="g-zhaopin">
+							<li><a href="">加入我们</a></li>
+							<li><a href="">壹生福利</a></li>
+							<li><a href="">工作环境</a></li>
+							<li><a href="">团队介绍</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			
@@ -119,8 +186,99 @@
 				<span></span>
 		</div>
 		<!-- 切换图片 -->
-		<div>
-			
+		<div class="g-tab" id="g-tab">
+			<ul class="g-tab-content">
+				<li class="g-tab-inner">
+						<figure>
+							<img src="./images/gen/s-1.jpg" alt="">
+						</figure>
+						<figcaption>
+							<a href="JavaScript:;">
+								<span>辣妈计划飞播</span>
+								<span>浏览</span>
+							</a>
+						</figcaption>
+				</li>
+				<li class="g-tab-inner">
+						<figure>
+							<img src="./images/gen/s-2.jpg" alt="">
+						</figure>
+						<figcaption>
+							<a href="JavaScript:;">
+								<span>辣妈计划飞播</span>
+								<span>浏览</span>
+							</a>
+						</figcaption>
+				</li>
+				<li class="g-tab-inner">
+						<figure>
+							<img src="./images/gen/s-3.jpg" alt="">
+						</figure>
+						<figcaption>
+							<a href="JavaScript:;">
+								<span>辣妈计划飞播</span>
+								<span>浏览</span>
+							</a>
+						</figcaption>
+				</li>
+				<li class="g-tab-inner">
+						<figure>
+							<img src="./images/gen/s-4.jpg" alt="">
+						</figure>
+						<figcaption>
+							<a href="JavaScript:;">
+								<span>辣妈计划飞播</span>
+								<span>浏览</span>
+							</a>
+						</figcaption>
+				</li>
+				<li class="g-tab-inner">
+						<figure>
+							<img src="./images/gen/s-5.jpg" alt="">
+						</figure>
+						<figcaption>
+							<a href="JavaScript:;">
+								<span>辣妈计划飞播</span>
+								<span>浏览</span>
+							</a>
+						</figcaption>
+				</li>
+				<li class="g-tab-inner">
+						<figure>
+							<img src="./images/gen/s-6.jpg" alt="">
+						</figure>
+						<figcaption>
+							<a href="JavaScript:;">
+								<span>辣妈计划飞播</span>
+								<span>浏览</span>
+							</a>
+						</figcaption>
+				</li>
+				<li class="g-tab-inner">
+						<figure>
+							<img src="./images/gen/s-7.jpg" alt="">
+						</figure>
+						<figcaption>
+							<a href="JavaScript:;">
+								<span>辣妈计划飞播</span>
+								<span>浏览</span>
+							</a>
+						</figcaption>
+				</li>
+				<li class="g-tab-inner">
+						<figure>
+							<img src="./images/gen/s-8.jpg" alt="">
+						</figure>
+						<figcaption>
+							<a href="JavaScript:;">
+								<span>辣妈计划飞播</span>
+								<span>浏览</span>
+							</a>
+						</figcaption>
+				</li>
+			</ul>
+			<a href="javascript:;" class="g-tab-perv g-tab-btn"><span class=" icon-angle-left"></span></a>
+			<a href="javascript:;" class="g-tab-next g-tab-btn"><span class=" icon-angle-right"></span></a>
 		</div>
 		<div class="g-content-title" style="background: #fff;">
 				<h1>新闻报道</h1>
@@ -130,7 +288,7 @@
 			<div class="container-fluid">
 					<div class="row">
 					<div class="col-sm-6 col-lg-3 col-xs-12">
-						<ul>
+						<ul class="g-n-item">
 							<li>
 								<a href="javascript:;" title="辣妈计划成为中国一家登上福布斯的社群电商平台">
 									<img src="./images/gen/n-thumb1.jpg" alt="" >
@@ -148,7 +306,7 @@
 						</ul>
 					</div>
 					<div class="col-sm-6 col-lg-3 col-xs-12">
-						<ul>
+						<ul class="g-n-item">
 							<li>
 								<a href="javascript:;" title="辣妈计划&华侨大学：加强校企合作 培养创新人才">
 									<img src="./images/gen/n-thumb3.jpg" alt="" >
@@ -166,7 +324,7 @@
 						</ul>
 					</div>
 					<div class="col-sm-6 col-lg-3 col-xs-12">
-						<ul>
+						<ul class="g-n-item">
 							<li>
 								<a href="javascript:;" title="辣妈计划斩获4项大奖，闪耀2018财经峰会">
 									<img src="./images/gen/n-thumb3.jpg" alt="" >
@@ -184,7 +342,7 @@
 						</ul>
 					</div>
 					<div class="col-sm-6 col-lg-3 col-xs-12">
-						<ul>
+						<ul class="g-n-item">
 							<li>
 								<a href="javascript:;" title="辣妈计划CEO：诗加荣膺猎云网年度创业新星">
 									<img src="./images/gen/n-thumb4.jpg" alt="" >

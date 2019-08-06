@@ -1,10 +1,10 @@
 
 .g-content{
 	min-height: 500px;
-	
+	overflow: hidden;
 }
-.g-content-top{
-	
+.g-content-top.container-fluid{
+	padding: 0;
 }
 .g-cont-inner{
 	height: 350px;
@@ -12,7 +12,6 @@
 }
 .g-inner-img span{
 	display: block;
-	/* width: 100%; */
 	height: 100%;
 	transform: scaleX(1.5);
 	background: url(../../images/gen/cont1.jpg) center no-repeat;
@@ -73,8 +72,125 @@
 	height: 2px;
 	border-top:2px solid #000000 ;
 	
-};
+}
+
+
+.g-n-item{
+	width:90%;
+	margin: 20px auto;
+}
+.g-n-item>li:nth-child(1){
+	margin-bottom: 20px;
+}
+.g-n-item>li:nth-child(2){
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.g-n-item>li:nth-child(3){
+	color:#ccc;
+	margin-bottom: 30px;
+}
+.g-n-item>li:nth-child(2) a{
+	color:#000;
+}
+.g-n-item img{
+	display: block;
+	width: 100%;
+}
+
+
+
+
+/* 切图 */
+.g-tab{
+	position: relative;
+	height: 250px;
+	width:100vw;
+	overflow: hidden;
+}
+.g-tab-content{
+	display: flex;
+	min-width:100vw;
+	position: absolute;
+}
+.g-tab-content li{
+	width:25vw;
+	height:250px;
+	position: relative;
+	overflow: hidden;
+}
+.g-tab-content li figure{
+	width: 100%;
+	height: 100%;
+	transition: 1s;
+	
+}
+.g-tab-content li img{
+	display: block;
+	width: 100%;
+	height: 100%;
+
+}
+.g-tab-content li figcaption{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:RGBA(226,25,24,.55) ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: 1s;
+}
+.g-tab-content>li figcaption a{
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	color:#fff;
+}
+
+.g-tab-content li:hover figcaption{
+	opacity: 1;
+}
+.g-tab-content li:hover figure{
+	transform: scale(1.5);
+}
+.g-tab-btn{
+	width: 40px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background: #CCCCCC;
+	color:#ccc;
+	font-size: 30px;
+	top:0;
+	transform: translateY(100%);
+	text-decoration: none;
+}
+.g-tab-btn:focus{
+	text-decoration: none;
+		color:#ccc;
+}
+.g-tab-btn:hover{
+	text-decoration: none;
+	color:#fff;
+	background:#f00;
+}
+.g-tab-perv{
+	left:0;
+}
+.g-tab-next{
+	right:18px;
+}
 @media screen and (max-width:950px) {
+	.g-tab-content li{
+		width:50vw;
+	}
 	.g-inner-img1 span{
 		transform: scaleX(1);
 	}
